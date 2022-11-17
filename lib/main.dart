@@ -36,15 +36,22 @@ class MyHomePage extends StatelessWidget {
             child: const Text('Item 1 - pretty big!'),
             color: Colors.red,
           ),
-          Container(
-            height: 100,
-            child: const Text('Item 2'),
-            color: Colors.blue,
+          Expanded(
+            flex: 4,
+            child: Container(
+              height: 100,
+              child: const Text('Item 2'),
+              color: Colors.blue,
+            ),
           ),
-          Container(
-            height: 100,
-            child: const Text('Item 3'),
-            color: Colors.orange,
+          Flexible(
+            flex: 1,
+            fit: FlexFit.loose,
+            child: Container(
+              height: 100,
+              child: const Text('Item 3'),
+              color: Colors.orange,
+            ),
           ),
         ],
       ),
